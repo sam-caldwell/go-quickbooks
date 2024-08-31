@@ -1,0 +1,69 @@
+# Jetbrains files...
+.idea/
+*.iml
+# ---
+
+# Obsideian/excalidraw files
+.obsidian
+
+
+# The directory where we build artifacts...
+build/
+**/builds/
+bin/
+*.log
+# ---
+
+# Used by Makefile.d/self-tests
+cmd/fakeProject/
+projects/fakeProject/
+
+# ---.DS_Store
+.DS_Store
+
+# Snyk cache
+.dccache
+
+# Node/Typescript stuff
+node_modules/
+
+# Python stuff
+.python-virtualenv/
+
+# Ruby stuff
+.bundle/
+*.gem
+Gemfile.lock
+
+# Packer stuff
+packer_cache/
+packer.log
+*.box
+*.ovf
+*.vmdk
+*.vdi
+virtualfloppy.vfd
+*.variables.json
+*.metadata.json
+
+# Go Environment
+pkg/
+
+# Rust stuff
+rust/**/target
+
+*.mp4
+*.wav
+*.mpg
+*.mpeg
+*.avi
+*.cpio
+*.bz
+*.bzip
+*.gzip
+*.xz
+*.exe
+*.bin
+*.o
+
+logs.txt
