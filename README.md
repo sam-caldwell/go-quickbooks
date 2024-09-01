@@ -36,3 +36,10 @@ qb-account-list -offset ${offset} -limit ${limit} -accessToken=yourAccessToken -
 ```shell
 qb-account-create -id=${ACCT_ID} -accessToken=yourAccessToken -companyId=yourCompanyId -developmentMode=true
 ```
+
+## Contributing
+Contributions are welcome! Please fork the repository and submit a pull request with your changes.
+
+## License
+This project is licensed under the MIT License. See the LICENSE file for details.
+
