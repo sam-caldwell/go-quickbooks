@@ -3,7 +3,7 @@ package main
 import (
 	"flag"
 	"github.com/sam-caldwell/ansi"
-	quickbooks "github.com/sam-caldwell/go-quickbooks"
+	"github.com/sam-caldwell/go-quickbooks"
 )
 
 func main() {
