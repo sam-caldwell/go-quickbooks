@@ -4,9 +4,10 @@ import (
 	"encoding/json"
 )
 
-// Serialize - serialize the Account structure to a []byte slice
-func (acct *Account) Serialize() (output []byte, err error) {
-	if output, err = json.Marshal(*acct); err != nil {
+// Serialize converts the Account structure to a JSON-encoded []byte slice.
+func (acct *Account) Serialize() ([]byte, error) {
+	output, err := json.Marshal(acct)
+	if err != nil {
 		return nil, err
 	}
 	return output, nil
