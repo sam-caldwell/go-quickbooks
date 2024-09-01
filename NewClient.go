@@ -13,7 +13,7 @@ const (
 )
 
 // NewClient creates a new QuickBooks API client or return nil and an error
-func NewClient(realmID, accessToken, companyId string, production bool) (*Client, error) {
+func NewClient(companyId, accessToken string, production bool) (*Client, error) {
 
 	var baseUrl string
 	if production {
@@ -25,16 +25,13 @@ func NewClient(realmID, accessToken, companyId string, production bool) (*Client
 	if strings.TrimSpace(accessToken) == "" {
 		return nil, fmt.Errorf("token required")
 	}
-	if strings.TrimSpace(realmID) == "" {
-		return nil, fmt.Errorf("realmID required")
-	}
 	if strings.TrimSpace(companyId) == "" {
 		return nil, fmt.Errorf("company id required")
 	}
 
 	return &Client{
 		BaseURL:     fmt.Sprintf(baseUrl, companyId),
-		RealmID:     realmID,
+		RealmID:     companyId,
 		AccessToken: accessToken,
 		HTTPClient:  &http.Client{Timeout: 10 * time.Second},
 	}, nil
